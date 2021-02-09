@@ -42,14 +42,6 @@
     </div>
     </br>
     <div>
-    <%= form.label :email_confirmation %><br>
-    <%= form.text_field :email_confirmation %>
-    <%= @user.errors.full_messages_for(:email_confirmation).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-    </div>
-    </br>
-    <div>
       <%= form.submit %>
     </div>
 
