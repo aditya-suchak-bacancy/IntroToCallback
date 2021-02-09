@@ -1,0 +1,56 @@
+<h1> New! </h1>
+<h3>Personal Details</h3>
+<%= form_with model: @user do |form| %> 
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <%= @user.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    </br>
+    <div>
+      <%= form.label :last_name %><br>
+      <%= form.text_field :last_name %>
+      <%= @user.errors.full_messages_for(:last_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    </br>
+    <div>
+      <%= form.label :dob %><br>
+      <%= form.date_field :dob, class: 'form-control' %>
+      <%= @user.errors.full_messages_for(:dob).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    </br>
+    <div>
+      <%= form.label :contact %><br>
+      <%= form.text_field :contact_no %>
+      <%= @user.errors.full_messages_for(:contact_no).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    </br>
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email %>
+      <%= @user.errors.full_messages_for(:email).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    </br>
+    <div>
+    <%= form.label :email_confirmation %><br>
+    <%= form.text_field :email_confirmation %>
+    <%= @user.errors.full_messages_for(:email_confirmation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+    </br>
+    <div>
+      <%= form.submit %>
+    </div>
+
+<% end %>
