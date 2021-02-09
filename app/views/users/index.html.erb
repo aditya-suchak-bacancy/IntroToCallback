@@ -1,2 +1,11 @@
-<h1>Usersindex</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Welcome! </h1>
+
+<ul>
+    <% @users.each do |u| %>
+        <li>
+         <%= link_to u.name, u =%>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "New" ,new_user_path %>
