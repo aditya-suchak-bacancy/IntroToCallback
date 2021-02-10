@@ -11,3 +11,8 @@ Contact no:
 Email:
 <%=@user.email =%>
 <br></br>
+<%= @user.message =%>
+
+<%= link_to "Destroy", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>

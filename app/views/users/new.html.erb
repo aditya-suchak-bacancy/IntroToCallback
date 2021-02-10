@@ -27,7 +27,7 @@
     </br>
     <div>
       <%= form.label :contact %><br>
-      <%= form.text_field :contact_no %>
+      <%= form.text_field :contact %>
       <%= @user.errors.full_messages_for(:contact_no).each do |message| %>
         <div><%= message %></div>
       <% end %>
@@ -44,5 +44,4 @@
     <div>
       <%= form.submit %>
     </div>
-
 <% end %>

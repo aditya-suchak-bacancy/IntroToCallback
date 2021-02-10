@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     if @user.save
         redirect_to @user
     else
+        flash["notice"] = "hello"
         render :new
     end
   end
@@ -20,6 +21,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to root_path
+  end
+
 
   private
 
